@@ -5,7 +5,7 @@ import { BsThreeDots } from "react-icons/bs";
 import gbenga from "../../images/gbenga.png";
 import slack from "../../images/slack.png";
 import github from "../../images/github.png";
-import zuri from "../../images/zuri-intenship.png";
+
 import I4G from "../../images/I4G.png";
 
 export const Home = () => {
