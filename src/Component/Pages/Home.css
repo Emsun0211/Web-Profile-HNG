@@ -66,6 +66,10 @@ a {
 	width: 100%;
 }
 
+.profile-name-slack {
+	display: none;
+}
+
 .link-container {
 	background-color: #eaecf0;
 	width: 80%;

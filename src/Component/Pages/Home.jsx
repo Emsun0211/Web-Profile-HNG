@@ -19,6 +19,8 @@ export const Home = () => {
 						<img src={gbenga} alt='' id='profile__img' />
 					</div>
 					<h4 className='profile-name'>Akinnukawe Gbenga</h4>
+					<h4 className='profile-name'>Twitter: @emiloluwa</h4>
+					<h4 className='profile-name-slack'>Emsun0211</h4>
 				</div>
 				<div className='link-container'>
 					<a
