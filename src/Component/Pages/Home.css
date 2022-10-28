@@ -1,12 +1,44 @@
+* {
+	text-decoration: none;
+}
+
+a {
+	color: #222;
+}
+
 .home-container {
 	min-width: 300px;
+	position: relative;
 
-	height: 100vh;
 	display: flex;
 	/* justify-content: center; */
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+}
+.ti-icon {
+	position: absolute;
+	right: 20%;
+	top: 6%;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #eaecf0;
+	color: #eaece0;
+	border-radius: 50%;
+	padding: 0.2rem;
+	display: none;
+}
+
+.bs-three-dot {
+	position: absolute;
+	right: 20%;
+	top: 6%;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #eaecf0;
+	color: #eaece0;
+	border-radius: 50%;
+	padding: 0.2rem;
 }
 
 .profile-container {
@@ -17,12 +49,17 @@
 }
 
 .profile-img {
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	border: 1px solid #222;
 	padding: 0.75rem;
 	margin-top: 2rem;
+	position: relative;
+}
+
+.profile-img:hover {
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .profile-img img {
@@ -36,4 +73,92 @@
 	text-align: center;
 	border-radius: 5px;
 	border: 1px solid #eaecf0;
+}
+
+.link-container:hover {
+	background-color: transparent;
+}
+
+.social-icon {
+	display: flex;
+	gap: 10px;
+	margin-top: 1.5rem;
+	width: 100%;
+	justify-content: center;
+}
+
+.slack-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.slack-icon img {
+	width: 100%;
+}
+
+footer {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 2rem;
+	gap: 10px;
+}
+
+.zuri-intenship {
+	font-size: 1.2rem;
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+.zuri-intenship span {
+	color: red;
+}
+.hng-text {
+	color: #777;
+}
+.hr-line {
+	width: 90%;
+	height: 1px;
+	background-color: #eaece0;
+	margin-top: 0.4rem;
+}
+
+/* .zuri-intenship span {
+	color: red;
+	font-weight: 800;
+} */
+
+@media (min-width: 480px) {
+	.profile-img {
+		width: 70px;
+		height: 70px;
+	}
+
+	footer {
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		gap: 10px;
+		padding: 1rem 3rem;
+	}
+
+	.zuri-intenship {
+		font-size: 1.75rem;
+		margin-top: 0;
+	}
+
+	.bs-three-dot {
+		display: none;
+	}
+
+	.ti-icon {
+		display: block;
+	}
+	/* .zuri-intenship span {
+		color: red;
+		font-weight: 800;
+	} */
 }

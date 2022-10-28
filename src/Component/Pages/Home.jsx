@@ -1,16 +1,19 @@
 import React from "react";
 import "./Home.css";
-// import { LinkBtn } from "../LinkBtn";
-// import { ProfilePic } from "../ProfilePic";
+import { TiArrowForwardOutline } from "react-icons/ti";
+import { BsThreeDots } from "react-icons/bs";
 import gbenga from "../../images/gbenga.png";
-import slack from "../../images/slack.webp";
-import github from "../../images/GitHub-Mark.png";
+import slack from "../../images/slack.png";
+import github from "../../images/github.png";
+import zuri from "../../images/zuri-intenship.png";
+import I4G from "../../images/I4G.png";
 
 export const Home = () => {
-	console.log(github);
 	return (
 		<>
 			<div className='home-container'>
+				<TiArrowForwardOutline className='ti-icon' />
+				<BsThreeDots className='bs-three-dot' />
 				<div className='profile-container'>
 					<div className='profile-img'>
 						<img src={gbenga} alt='' id='profile__img' />
@@ -18,29 +21,76 @@ export const Home = () => {
 					<h4 className='profile-name'>Akinnukawe Gbenga</h4>
 				</div>
 				<div className='link-container'>
-					<a className='link-btn'>twitter Link</a>
+					<a
+						className='link-btn'
+						id='twitter'
+						href='https://twitter.com/emiloluwa'>
+						Twitter Link
+					</a>
 				</div>
 
 				<div className='link-container'>
-					<a className='link-btn'>twitter Link</a>
+					<a
+						className='link-btn'
+						id='btn__zuri'
+						href='https://training.zuri.team/'>
+						Zuri Team
+					</a>
 				</div>
 
 				<div className='link-container'>
-					<a className='link-btn'>twitter Link</a>
+					<a className='link-btn' id='btn__zuri' href='http://books.zuri.team'>
+						Zuri Books
+					</a>
 				</div>
 
 				<div className='link-container'>
-					<a className='link-btn'>twitter Link</a>
+					<a
+						className='link-btn'
+						id='book__python'
+						href='https://books.zuri.team/python-for-beginners?ref_id=<yourslackname>'>
+						Python Book
+					</a>
+				</div>
+
+				<div className='link-container'>
+					<a
+						className='link-btn'
+						id='book__design'
+						href='https://books.zuri.team/design-rules '>
+						Background Check for Coders
+					</a>
+				</div>
+
+				<div className='link-container'>
+					<a
+						className='link-btn'
+						id='pitch'
+						href='https://background.zuri.team'>
+						Design Books
+					</a>
 				</div>
 				<div className='social-icon'>
 					<div className='slack-icon'>
 						<img src={slack} alt='' />
 					</div>
 					<div className='slack-icon'>
-						<img src={slack} alt='' />
+						<img src={github} alt='' />
 					</div>
 				</div>
+				<div className='hr-line'></div>
 			</div>
+			<footer>
+				<p className='zuri-intenship'>
+					Zuri <span>.</span> Intership
+				</p>
+
+				<p className='hng-text'>HNG Internship 9 Frontend Task</p>
+
+				<div className='ingressive-img'>
+					<img src={I4G} alt='' />
+				</div>
+			</footer>
 		</>
 	);
 };
