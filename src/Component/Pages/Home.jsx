@@ -72,6 +72,8 @@ export const Home = () => {
 						Design Books
 					</a>
 				</div>
+
+				<div className='link-container'></div>
 				<div className='social-icon'>
 					<div className='slack-icon'>
 						<img src={slack} alt='' />
