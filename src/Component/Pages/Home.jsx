@@ -7,7 +7,7 @@ import slack from "../../images/slack.png";
 import github from "../../images/github.png";
 
 import I4G from "../../images/I4G.png";
-import { LinkBtn } from "../LinkBtn";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
@@ -75,7 +75,9 @@ export const Home = () => {
 				</div>
 
 				<div className='link-container'>
-					<LinkBtn id={"Contact"} href='/Contact' text={"Contact"} />
+					<Link to={"/contact"} className='link-btn' id='contact'>
+						Contact
+					</Link>
 				</div>
 				<div className='social-icon'>
 					<div className='slack-icon'>

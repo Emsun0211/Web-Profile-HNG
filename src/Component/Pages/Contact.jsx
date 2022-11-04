@@ -16,6 +16,7 @@ function Contact() {
 							First name
 						</label>
 						<input
+							id='first_name'
 							tabIndex={0}
 							arial-label='Please input name'
 							type='name'
@@ -28,6 +29,7 @@ function Contact() {
 							Last name
 						</label>
 						<input
+							id='last_name'
 							tabIndex={0}
 							arial-label='Please input email address'
 							type='name'
@@ -47,6 +49,7 @@ function Contact() {
 							role='input'
 							arial-label='Please input your email'
 							type='name'
+							id='email'
 							className='placeholder:text-slate-400 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 '
 						/>
 					</div>
@@ -57,6 +60,7 @@ function Contact() {
 							Message
 						</label>
 						<textarea
+							id='message'
 							tabIndex={0}
 							aria-label='leave a message'
 							role='textbox'
@@ -76,7 +80,9 @@ function Contact() {
 					</p>
 				</div>
 				<div className='flex items-center justify-center w-full'>
-					<button className='w-full  mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-blue-500 rounded hover:bg-blue-400 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none'>
+					<button
+						id='btn__submit'
+						className='w-full  mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-blue-500 rounded hover:bg-blue-400 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none'>
 						Send message
 					</button>
 				</div>
