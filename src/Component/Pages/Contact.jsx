@@ -1,3 +1,12 @@
+import React from "react";
+import * as yup from "yup";
+
+let schema = yup.object().shape({
+	name: yup.string().required(),
+
+	email: yup.string().email(),
+});
+
 function Contact() {
 	return (
 		// <div className='bg-gradient-to-b  h-96 w-full'>

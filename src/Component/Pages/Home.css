@@ -69,6 +69,9 @@ a {
 .profile-name-slack {
 	display: none;
 }
+.profile-name-twitter {
+	display: none;
+}
 
 .link-container {
 	background-color: #eaecf0;
