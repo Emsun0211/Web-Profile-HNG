@@ -1,15 +1,7 @@
 import React from "react";
-import * as yup from "yup";
-
-let schema = yup.object().shape({
-	name: yup.string().required(),
-
-	email: yup.string().email(),
-});
 
 function Contact() {
 	return (
-		// <div className='bg-gradient-to-b  h-96 w-full'>
 		<div className='w-full flex items-center justify-center '>
 			<form className='absolute top-4 bg-white  rounded py-12 lg:px-28 px-8'>
 				<p className='md:text-3xl text-xl font-bold leading-7 text-left text-gray-700'>
@@ -55,7 +47,7 @@ function Contact() {
 						<input
 							placeholder='Please input your email'
 							tabIndex={0}
-							role='input'
+							// role='input'
 							arial-label='Please input your email'
 							type='name'
 							id='email'
@@ -72,7 +64,7 @@ function Contact() {
 							id='message'
 							tabIndex={0}
 							aria-label='leave a message'
-							role='textbox'
+							// role='textbox'
 							type='name'
 							className='placeholder:text-slate-400 h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none'
 							placeholder='Send your message and I will reply soon'
@@ -97,7 +89,6 @@ function Contact() {
 				</div>
 			</form>
 		</div>
-		// </div>
 	);
 }
 

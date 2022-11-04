@@ -3,7 +3,7 @@ import React from "react";
 // import { NewForm } from "./Component/Form/NewForm";
 import { Home } from "./Component/Pages/Home";
 import Contact from "./Component/Pages/Contact";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 	return (
