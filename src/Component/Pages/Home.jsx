@@ -7,6 +7,7 @@ import slack from "../../images/slack.png";
 import github from "../../images/github.png";
 
 import I4G from "../../images/I4G.png";
+import { LinkBtn } from "../LinkBtn";
 
 export const Home = () => {
 	return (
@@ -73,7 +74,9 @@ export const Home = () => {
 					</a>
 				</div>
 
-				<div className='link-container'></div>
+				<div className='link-container'>
+					<LinkBtn id={"Contact"} href='/Contact' text={"Contact"} />
+				</div>
 				<div className='social-icon'>
 					<div className='slack-icon'>
 						<img src={slack} alt='' />
