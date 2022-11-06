@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { object } from "yup";
+import React, { useState } from "react";
+// import { object } from "yup";
 import { Footer } from "../Footer";
 
 function Contact() {
@@ -8,6 +8,7 @@ function Contact() {
 		lastname: "",
 		email: "",
 		textarea: "",
+		checkbox: "",
 	};
 
 	const [formValue, setformValue] = useState(initialValues);
@@ -16,10 +17,11 @@ function Contact() {
 
 	const [isSubmit, setisSubmit] = useState(false);
 
+	const [ischecked, setischecked] = useState(false);
+
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setformValue({ ...formValue, [name]: value });
-		console.log(formValue);
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -27,14 +29,13 @@ function Contact() {
 		setisSubmit(true);
 	};
 
-	useEffect(() => {
-		console.log(formErrors);
-		if (Object.keys(formErrors).length === 0 && isSubmit) {
-			console.log(formValue);
-		}
-	}, [formErrors]);
+	// useEffect(() => {
+	// 	if (Object.keys(formErrors).length === 0 && isSubmit) {
+	// 	}
+	// }, [formErrors]);
 
 	const validate = (values) => {
+		const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 		const errors = {};
 		if (!values.firstname) {
 			errors.firstname = "Firstname is required";
@@ -44,17 +45,27 @@ function Contact() {
 		}
 		if (!values.email) {
 			errors.email = "Email is required";
+		} else if (!emailRegex.test(values.email)) {
+			errors.email = "Enter a valid email";
 		}
 
 		if (!values.textarea) {
 			errors.textarea = "Message is required";
+		}
+		if (!values.checkbox) {
+			errors.checkbox = "Please agree to terms and condition";
 		}
 
 		return errors;
 	};
 	return (
 		<>
-			<prev>{JSON.stringify(formValue, undefined, 2)}</prev>
+			{Object.keys(formErrors).length === 0 && isSubmit ? (
+				<div>Submited successfully</div>
+			) : (
+				""
+			)}
+			{/* <prev>{JSON.stringify(formValue, undefined, 2)}</prev> */}
 			<div className='w-full flex items-center justify-center '>
 				<form
 					onSubmit={handleSubmit}
@@ -112,7 +123,7 @@ function Contact() {
 								tabIndex={0}
 								// role='input'
 								arial-label='yourname@email.com'
-								type='email'
+								type='text'
 								id='email'
 								className='placeholder:text-slate-400 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 '
 								name='email'
@@ -144,13 +155,19 @@ function Contact() {
 					</div>
 					<div className='flex justify-center items-center p-2'>
 						<div className='rounded-full mx-2 mt-3'>
-							<input type='checkbox' />
+							<input
+								onClick={() => {
+									setischecked(true);
+								}}
+								type='checkbox'
+							/>
 						</div>
 						<p className='text-xs leading-5 text-gray-600 mt-4'>
 							By clicking submit you agree to our terms of service, privacy
 							policy and how we use data as stated
 						</p>
 					</div>
+					<p className='error'>{!ischecked ? formErrors.checkbox : ""}</p>
 					<div className='flex items-center justify-center w-full'>
 						<button
 							type='submit'
