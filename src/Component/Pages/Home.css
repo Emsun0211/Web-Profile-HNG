@@ -5,6 +5,10 @@
 a {
 	color: #222;
 }
+.error {
+	color: red;
+	padding-top: 0.4rem;
+}
 
 .home-container {
 	min-width: 300px;
